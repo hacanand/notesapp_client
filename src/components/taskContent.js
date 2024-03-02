@@ -36,7 +36,7 @@ function TaskContent() {
   useEffect(() => {
     const fetchingData = async () => {
       const data = await axios.get(
-        `https://notesapp-server-dun.vercel.app/api/v1/allnotes/${id}`
+        `https://notesapp-server-nine.vercel.app/api/v1/allnotes/${id}`
       );
       setTitleNotes(data?.data?.data);
     };
@@ -70,12 +70,12 @@ function TaskContent() {
 
   const createNotes = async () => {
     if (trackInput && trackInput.length > 0 && trackInput.trim().length > 0) {
-      await axios.post("https://notesapp-server-dun.vercel.app/api/v1/notes", {
+      await axios.post("https://notesapp-server-nine.vercel.app/api/v1/notes", {
         groups: id,
         content: trackInput,
       });
       const data = await axios.get(
-        `https://notesapp-server-dun.vercel.app/api/v1/allnotes/${id}`
+        `https://notesapp-server-nine.vercel.app/api/v1/allnotes/${id}`
       );
       setTitleNotes(data?.data?.data);
     }

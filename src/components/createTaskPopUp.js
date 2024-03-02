@@ -27,7 +27,7 @@ function CreateTaskPopUp({ setRefreshGroups, refreshGroups, setPopUpState }) {
   const handleSubmit = async (event) => {
     event.preventDefault();
     const data = await axios.post(
-      "https://notesapp-server-dun.vercel.app/api/v1/groups",
+      "https://notesapp-server-nine.vercel.app/api/v1/groups",
       {
         name: groupName,
         color: selectedColor,

@@ -30,7 +30,7 @@ function GroupList({ setPopUpState, hidePopUp, refreshGroups, setShowNotes }) {
   
   const fetchingData = async () => {
     const data = await axios.get(
-      "https://notesapp-server-dun.vercel.app/api/v1/groups"
+      "https://notesapp-server-nine.vercel.app/api/v1/groups"
     );
     setGroupData(data.data.data);
   };
